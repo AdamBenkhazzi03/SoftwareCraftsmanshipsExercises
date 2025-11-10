@@ -2,40 +2,40 @@ package be.ucll.craftsmanship.Ps5Controller;
 
 public class Controller{
 
-  Command crossCommand;
-  Command squareCommand;
-  Command triangleCommand;
-  Command circleCommand;
+  Command crossButtonCommand;
+  Command squareButtonCommand;
+  Command triangleButtonCommand;
+  Command circleButtonCommand;
 
-  public Controller(Command crossCommand, Command squareCommand, Command triangleCommand, Command circleCommand){
-    setButtonTriangle(triangleCommand);  
-    setButtonSquare(squareCommand);
-    setButtonCircle(circleCommand);
-    setButtonCross(crossCommand);
+  public Controller(Command crossButtonCommand, Command squareButtonCommand, Command triangleButtonCommand, Command circleButtonCommand){
+    setButtonTriangle(triangleButtonCommand);  
+    setButtonSquare(squareButtonCommand);
+    setButtonCircle(circleButtonCommand);
+    setButtonCross(crossButtonCommand);
   }
 
-  public void pressCross() { crossCommand.execute(); }
-  public void pressSquare() { squareCommand.execute(); }
-  public void pressTriangle() { triangleCommand.execute(); }
-  public void pressCircle() { circleCommand.execute(); }
+  public void pressCross() { crossButtonCommand.execute(); }
+  public void pressSquare() { squareButtonCommand.execute(); }
+  public void pressTriangle() { triangleButtonCommand.execute(); }
+  public void pressCircle() { circleButtonCommand.execute(); }
 
   public void setButtonCross(Command command) {
     System.out.println("Mapped Cross to " + command.toString());
-    this.crossCommand = command;
+    this.crossButtonCommand = command;
   }
 
   public void setButtonCircle(Command command) {
     System.out.println("Mapped Circle to " + command.toString());
-    this.circleCommand = command;
+    this.circleButtonCommand = command;
   }
 
   public void setButtonSquare(Command command) {
     System.out.println("Mapped Square to " + command.toString());
-    this.squareCommand = command;
+    this.squareButtonCommand = command;
   }
 
   public void setButtonTriangle(Command command) {
     System.out.println("Mapped triangle to " + command.toString());
-    this.triangleCommand = command;
+    this.triangleButtonCommand = command;
   }
 }
